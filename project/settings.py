@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     # third party apps
     'django_extensions',
+    'rest_framework',
 
     # local apps
     'books',
