@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 from dotenv import load_dotenv
 import os
 
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     # third party apps
     'django_extensions',
     'rest_framework',
+    'djoser',
 
     # local apps
     'books',
@@ -115,6 +117,19 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+SIMPLE_JWT = {
+   'AUTH_HEADER_TYPES': ('JWT',),
+   "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
+   "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+}
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -143,3 +158,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SHELL_PLUS = "ipython"
 
 AUTH_USER_MODEL = 'core.User'
+
+DJOSER = {
+    'SERIALIZERS': {
+        'user_create': 'core.serializers.UserCreateSerializer',
+        'current_user': 'core.serializers.UserSerializer'
+    }
+}
