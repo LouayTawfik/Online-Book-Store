@@ -15,7 +15,7 @@ class BookRetrieveAPIView(AuthenticateAPIViewsMixin, BaseBookMixin, RetrieveAPIV
 
 
 class ReviewListAPIView(ListCreateAPIView):
-    queryset = Review.objects.all().select_related('user')
+    queryset = Review.objects.select_related('user')
     serializer_class = ReviewListSerializer
     permission_classes = [IsAuthenticated]
 
