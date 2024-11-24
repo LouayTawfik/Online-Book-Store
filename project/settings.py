@@ -50,7 +50,7 @@ INSTALLED_APPS = [
 
     # local apps
     'books',
-    'core',
+    'authentication',
 ]
 
 MIDDLEWARE = [
@@ -157,11 +157,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SHELL_PLUS = "ipython"
 
-AUTH_USER_MODEL = 'core.User'
+AUTH_USER_MODEL = 'authentication.User'
 
 DJOSER = {
     'SERIALIZERS': {
-        'user_create': 'core.serializers.UserCreateSerializer',
-        'current_user': 'core.serializers.UserSerializer'
+        'user_create': 'authentication.serializers.UserCreateSerializer',
+        'current_user': 'authentication.serializers.UserSerializer'
     }
 }
