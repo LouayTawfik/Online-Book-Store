@@ -48,5 +48,17 @@ A virtual bookstore where users can read and review books.
 ## 8- Access the application at http://127.0.0.1:8000/
 
 ## Environment Variables
+### Create a .env file in the root directory and add the following variables:
+```
+ # .env
+DEBUG=True
+SECRET_KEY=your-secret-key
+DATABASE_URL=postgres://user:password@localhost:5432/dbname
+ALLOWED_HOSTS=localhost,127.0.0.1
+```
+* Replace your-secret-key with a secure secret key.
+* Replace user, password, and dbname with your PostgreSQL credentials.
+
+# Docker Setup
 
 
