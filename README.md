@@ -67,5 +67,16 @@ ALLOWED_HOSTS=localhost,127.0.0.1
 ```
  docker-compose up --build
 ```
+## 3.Access the application at http://127.0.0.1:8000/.
+
+# API Documentation:
+The application uses Django REST Framework (DRF) for API endpoints. To view the API documentation:
+## 1.Run the development server:
+```
+ python3 manage.py runserver
+```
+## 2.Access the API documentation at:
+ * Swagger UI: http://127.0.0.1:8000/swagger/
+ * ReDoc: http://127.0.0.1:8000/redoc/
 
 
