@@ -47,7 +47,7 @@ A virtual bookstore where users can read and review books.
 ```
 ## 8- Access the application at http://127.0.0.1:8000/
 
-## Environment Variables
+# Environment Variables
 ### Create a .env file in the root directory and add the following variables:
 ```
  # .env
@@ -60,5 +60,12 @@ ALLOWED_HOSTS=localhost,127.0.0.1
 * Replace user, password, and dbname with your PostgreSQL credentials.
 
 # Docker Setup
+### To run the application using Docker:
+## 1.Install Docker:
+* Download and install Docker from https://www.docker.com/.
+## 2.Build and run the containers:
+```
+ docker-compose up --build
+```
 
 
